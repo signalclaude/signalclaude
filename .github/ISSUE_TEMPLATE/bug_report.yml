@@ -1,0 +1,58 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["type: bug"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of SignalClaude is affected?
+      options:
+        - CLI (signalclaude)
+        - Launcher
+        - MCP Server
+        - Web Dashboard
+        - Server API
+        - Shared Library
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? What did you expect to happen?
+      placeholder: A clear description of the bug...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this?
+      placeholder: |
+        1. Run signalclaude launch ...
+        2. Open the web dashboard
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Your setup details
+      placeholder: |
+        - OS: Windows 11 / macOS / Linux
+        - Node.js version: 22.x
+        - SignalClaude version: 0.1.1
+        - Claude Code version: x.x.x
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Error Output
+      description: Paste any relevant logs or error messages
+      render: shell
+    validations:
+      required: false

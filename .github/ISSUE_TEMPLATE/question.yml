@@ -1,0 +1,33 @@
+name: Question
+description: Ask a question about setup, usage, or troubleshooting
+title: "[Question]: "
+labels: ["type: question"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Related Component
+      description: Which part of SignalClaude is this about?
+      options:
+        - CLI (signalclaude)
+        - Launcher
+        - MCP Server
+        - Web Dashboard
+        - Server API
+        - General / Setup
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What do you need help with?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Any additional context, config, or screenshots
+    validations:
+      required: false
